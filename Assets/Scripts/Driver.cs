@@ -15,4 +15,6 @@ public class Driver : MonoBehaviour
 
         transform.Translate(0, moveSpeed * moveAmount * Time.deltaTime, 0); //move the car forward
     }
+
+
 }

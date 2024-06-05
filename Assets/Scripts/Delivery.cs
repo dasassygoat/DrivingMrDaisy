@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+    [SerializeField]
+    float destroyTime = 0.5f;
     private bool hasPackage = false;
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -22,7 +24,7 @@ public class Delivery : MonoBehaviour
         if (other.tag == "Customer" && hasPackage)
         {
             Debug.Log("Delivered Package");
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, destroyTime);
         }
         else if (other.tag == "Customer" && !hasPackage)
         {

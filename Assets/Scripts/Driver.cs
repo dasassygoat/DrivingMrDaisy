@@ -5,6 +5,8 @@ public class Driver : MonoBehaviour
 {
     [SerializeField]private float steerSpeed = 0.1f;
     [SerializeField]private float moveSpeed = 0.01f;
+    [SerializeField] private float slowSpeed = 0.005f;
+    [SerializeField] private float bumpSpeed = 0.005f;
 
     // Update is called once per frame
     private void Update()
